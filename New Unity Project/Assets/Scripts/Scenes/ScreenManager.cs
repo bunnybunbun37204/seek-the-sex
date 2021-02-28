@@ -6,14 +6,16 @@ using DG.Tweening;
 
 public class ScreenManager : MonoBehaviour
 {
-    public RectTransform chatMenu, knowledgeMenu, settingMenu, charactersMenu, seekMenu;
+    public RectTransform chatMenu, knowledgeMenu, settingMenu, charactersMenu, seekMenu, noti;
     public void KnowledgeBtn()
     {
         chatMenu.DOAnchorPos(new Vector2(500, 0), 0.25f);
         settingMenu.DOAnchorPos(new Vector2(0, 500), 0.25f);
         charactersMenu.DOAnchorPos(new Vector2(-500, 0), 0.25f);
+        noti.DOAnchorPos(new Vector2(0, 500), 0.25f);
         seekMenu.DOAnchorPos(new Vector2(290, 0), 0.25f);
         knowledgeMenu.DOAnchorPos(Vector2.zero, 0.25f);
+        
     }
     public void CharactersBtn()
     {
