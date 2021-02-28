@@ -22,10 +22,12 @@ public class SceneControl : MonoBehaviour
         {
             case "scene1":
                 sceneObjects[0].SetActive(true);
+                PlayerPrefs.SetString("id", ChatManager.id);
                 break;
             case "scene2":
                 sceneObjects[0].SetActive(false);
                 sceneObjects[1].SetActive(true);
+                PlayerPrefs.SetString("id", ChatManager.id);
                 break;
         }
     }

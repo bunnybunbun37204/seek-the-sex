@@ -16,7 +16,8 @@ public class ChatManager : MonoBehaviour
         setToZero(gameObjectToDisable2);
         if (PlayerPrefs.GetString("id") != null)
         {
-            id = PlayerPrefs.GetString("id");
+            //id = PlayerPrefs.GetString("id");
+            id = "scene1";
         }
         else
         {
@@ -53,7 +54,7 @@ public class ChatManager : MonoBehaviour
                 }
                 catch
                 {
-                    id = "scene2";
+                    id = "scene1";
                     index = 0; 
                 }
                 break;
