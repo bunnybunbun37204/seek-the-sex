@@ -8,7 +8,7 @@ public class onTapBg : MonoBehaviour
     // Start is called before the first frame update
    public void chatHome()
     {
-        SceneManager.LoadScene("Chat");
+        SceneManager.LoadScene("Game");
     }
     private void FixedUpdate()
     {

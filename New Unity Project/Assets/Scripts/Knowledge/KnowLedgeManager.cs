@@ -22,6 +22,10 @@ public class KnowLedgeManager : MonoBehaviour
             case "1":
                 knowLedgeObj[0].SetActive(true);
                 break;
+            case "2":
+                knowLedgeObj[0].SetActive(true);
+                knowLedgeObj[1].SetActive(true);
+                break;
         }
     }
 }
