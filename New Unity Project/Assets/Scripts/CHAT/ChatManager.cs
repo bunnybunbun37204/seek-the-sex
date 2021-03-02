@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ChatManager : MonoBehaviour
 {
     public RectTransform noti;
-    public Text text;
+    public Text text,date;
     public List<GameObject> gameObjectToDisable1;
     public List<GameObject> gameObjectToDisable2;
     public List<GameObject> gameObjectToDisable3;
@@ -26,8 +26,8 @@ public class ChatManager : MonoBehaviour
     {
         setToZero(gameObjectToDisable1);
         setToZero(gameObjectToDisable2);
-        setToZero(gameObjectToDisable3);
-        setToZero(gameObjectToDisable4);
+        setZeroChoice(gameObjectToDisable3);
+        setZeroChoice(gameObjectToDisable4);
         setToZero(gameObjectToDisable5);
         setToZero(gameObjectToDisable6);
         setToZero(gameObjectToDisable7);
@@ -51,11 +51,22 @@ public class ChatManager : MonoBehaviour
             gameObjects[i].SetActive(false);
         }
     }
+    void setZeroChoice(List<GameObject> gameObjects)
+    {
+        for (int i = 1; i < gameObjects.Count; i++)
+        {
+            gameObjects[i].SetActive(false);
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
         Playing();
+    }
+    private void FixedUpdate()
+    {
+        Debug.Log(id);
     }
 
     public void ontap()
@@ -89,17 +100,18 @@ public class ChatManager : MonoBehaviour
                 gameObjectToDisable2[0].SetActive(true);
                 try
                 {
-                    if(index == 3 && sceneWhenChoiceScene2 == "choice1") 
+                    if(index == 3 || sceneWhenChoiceScene2 == "choice1") 
                     {
                         gameObjectToDisable2[3].SetActive(true);
                         gameObjectToDisable2[4].SetActive(false);
-                        _id = "scene2.1";
+                        id = "scene2.1";
+                        index = 0;
                     }
-                    else if(index == 4 && sceneWhenChoiceScene2 == "choice2")
+                    else if(index == 4 || sceneWhenChoiceScene2 == "choice2")
                     {
                         gameObjectToDisable2[3].SetActive(false);
                         gameObjectToDisable2[4].SetActive(true);
-                        _id = "scene2.2";
+                        id = "scene2.2";
                     }
                     else
                     {
@@ -108,13 +120,11 @@ public class ChatManager : MonoBehaviour
                 }
                 catch
                 {
-                    id = _id;
-                    gameObjectToDisable3[0].SetActive(true);
                     index = 0;
                 }
                 break;
             case "scene2.1":
-                
+                gameObjectToDisable3[0].SetActive(true);
                 try
                 {
                     gameObjectToDisable3[index].SetActive(true);

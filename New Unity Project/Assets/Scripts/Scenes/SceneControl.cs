@@ -32,6 +32,7 @@ public class SceneControl : MonoBehaviour
             case "scene2.1":
                 sceneObjects[0].SetActive(false);
                 sceneObjects[1].SetActive(true);
+                sceneObjects[3].SetActive(false);
                 sceneObjects[2].SetActive(true);
                 PlayerPrefs.SetString("id", ChatManager.id);
                 break;
