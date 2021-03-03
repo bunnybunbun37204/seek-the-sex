@@ -10,7 +10,7 @@ public class ChoiceManage : MonoBehaviour
     string txt;
     public void scene2_choice1()
     {
-        txt = "a";
+        txt = "มึงเอาจริงหรอวะ";
         choice1.SetActive(false);
         choice2.SetActive(false);
         ChatManager.sceneWhenChoiceScene2 = "choice1";

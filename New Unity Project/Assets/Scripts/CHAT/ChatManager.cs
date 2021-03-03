@@ -15,6 +15,17 @@ public class ChatManager : MonoBehaviour
     public List<GameObject> gameObjectToDisable5;
     public List<GameObject> gameObjectToDisable6;
     public List<GameObject> gameObjectToDisable7;
+    public List<GameObject> gameObjectToDisable8;
+    public List<GameObject> gameObjectToDisable9;
+    public List<GameObject> gameObjectToDisable10;
+    public List<GameObject> gameObjectToDisable11, gameObjectToDisable12, gameObjectToDisable13, gameObjectToDisable14, gameObjectToDisable15;
+    public List<GameObject> gameObjectToDisable16, gameObjectToDisable17, gameObjectToDisable18, gameObjectToDisable19, gameObjectToDisable20;
+    public List<GameObject> gameObjectToDisable21, gameObjectToDisable22, gameObjectToDisable23, gameObjectToDisable24, gameObjectToDisable25;
+    public List<GameObject> gameObjectToDisable26, gameObjectToDisable27, gameObjectToDisable28, gameObjectToDisable29, gameObjectToDisable30;
+    public List<GameObject> gameObjectToDisable31, gameObjectToDisable32, gameObjectToDisable33, gameObjectToDisable34, gameObjectToDisable35;
+    public List<GameObject> gameObjectToDisable36, gameObjectToDisable37, gameObjectToDisable38, gameObjectToDisable39, gameObjectToDisable40;
+    public List<GameObject> gameObjectToDisable41, gameObjectToDisable42, gameObjectToDisable43, gameObjectToDisable44, gameObjectToDisable45;
+    public List<GameObject> gameObjectToDisable46, gameObjectToDisable47, gameObjectToDisable48, gameObjectToDisable49, gameObjectToDisable50;
     public static string id;
     public static string sceneWhenChoiceScene2;
     public static string knowledgeKey;
@@ -29,8 +40,6 @@ public class ChatManager : MonoBehaviour
         setZeroChoice(gameObjectToDisable3);
         setZeroChoice(gameObjectToDisable4);
         setToZero(gameObjectToDisable5);
-        setToZero(gameObjectToDisable6);
-        setToZero(gameObjectToDisable7);
         knowledgeKey = "None";
         sceneWhenChoiceScene2 = "None";
         if (PlayerPrefs.GetString("id") != null)
@@ -64,10 +73,7 @@ public class ChatManager : MonoBehaviour
     {
         Playing();
     }
-    private void FixedUpdate()
-    {
-        Debug.Log(id);
-    }
+
 
     public void ontap()
     {
@@ -196,6 +202,7 @@ public class ChatManager : MonoBehaviour
                     index = 0;
                 }
                 break;
+
 
         }
         
